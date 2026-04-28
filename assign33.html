@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Assignmeant3.css">
+
+</head>
+
+<body>
+    <select id="myDropdown">
+        <option value="1">Java</option>
+        <option value="2">Python</option>
+        <option value="3">C++</option>
+    </select>
+
+    <button onclick="removeSelected()">Remove</button>
+
+    <script>
+        function removeSelected() {
+            const dropdown = document.getElementById("myDropdown");
+            
+            if (dropdown.selectedIndex !== -1) {
+                dropdown.remove(dropdown.selectedIndex);
+            } else {
+                alert("Please select an option to remove.");
+            }
+        }
+    </script>
+</body>
+</html>
